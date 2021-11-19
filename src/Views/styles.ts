@@ -3,22 +3,30 @@ import { Search } from '@styled-icons/bootstrap/Search';
 import { Github } from '@styled-icons/boxicons-logos/Github';
 
 export const Container = styled.div`
-    width: 500px;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    @media(min-width: 600px) {
+        width: 500px;
+    }
 `
 
 export const Titlte = styled.h1`
-    font-size: 26px;
-    color: #fff;
+    font-size: 20px;
+    margin: 0;
+    color: purple;
+    font-weight: bold;
+    text-align: center;
 `
 
 export const Form = styled.div`
     width: 100%;
     height: auto;
     padding: 20px;
+    gap: 15px;
     margin-top: 5px;
     background: #fff;
     border-radius: 6px;
@@ -27,6 +35,23 @@ export const Form = styled.div`
     align-items: flex-start;
     justify-content: center;
     position: relative;
+
+    .alert-dismissible .btn-close {
+        padding: 0.75rem 1rem!important;
+    }
+
+    .spinner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border-radius: 6px;
+    }
 `
 
 export const Input = styled.input`
@@ -41,7 +66,6 @@ export const Button = styled.button`
     width: 120px;
     height: 35px;
     padding: 10px;
-    margin-top: 10px;
     border-radius: 6px;
     font-size: 14px;
     display: flex;
@@ -62,12 +86,19 @@ export const IconSearch = styled(Search)`
     width: 15px;
     height: 15px;
     fill: #1a1a1a;
+    `
+
+export const AvatarGithub = styled.img`
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 4px solid #80008042;
 `
 
 export const ListRepositories = styled.div`
     width: 100%;
     height: 500px;
-    margin-top: 30px;
     border-radius: 6px;
     background: #fff;
     display: flex;
@@ -114,19 +145,19 @@ export const ListRepositories = styled.div`
 
 export const TotalRepositories = styled.div`
     position: absolute;
-    bottom: 0;
+    top: 0;
     right: 0;
-    margin: 0 20px 20px 0;
+    margin: 28px 45px 0 0;
     background: gray;
     color: white;
     border-radius: 4px;
     font-size: 12px;
-    padding: 4px 10px;
+    padding: 4px 8px;
 `
 
 export const IconGithub = styled(Github)`
-   width: 50px;
-   height: 50px;
-   color: #fff;
+   width: 45px;
+   height: 45px;
+   color: purple;
    padding-right: 5px;
 `
